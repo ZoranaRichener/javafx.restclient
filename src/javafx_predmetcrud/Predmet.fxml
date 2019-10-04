@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="620.0" style="-fx-background-color: #6D1550;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_predmetcrud.PredmetController">
+    <children>
+        <Button fx:id="buttonSearch" layoutX="489.0" layoutY="192.0" onAction="#handleSearchAction" text="Pretrazi" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+        <TextField fx:id="textFieldSearch" layoutX="47.0" layoutY="192.0" onAction="#handleSearchAction" prefHeight="25.0" prefWidth="251.0" />
+        <Text fx:id="naslov" fill="#f5f3f3" layoutX="71.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Predmeti">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+        <TableView fx:id="tableView" layoutX="39.0" layoutY="272.0" prefHeight="264.0" prefWidth="520.0">
+            <columns>
+          <TableColumn fx:id="predmet_id" prefWidth="127.0" text="ID predmeta">
+                    <cellValueFactory>   
+                        <PropertyValueFactory property="predmet_id" />
+                    </cellValueFactory>
+                </TableColumn>
+                
+                <TableColumn fx:id="predmet_naziv" prefWidth="260.0" text="Naziv predmeta">
+                    <cellValueFactory>   
+                        <PropertyValueFactory property="predmet_naziv" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="predmet_sifra" prefWidth="132.0" text="Sifra predmeta">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="predmet_sifra" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="406.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="slika" fitHeight="150.0" fitWidth="200.0" layoutX="375.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@metlogo.jpg" />
+            </image>
+        </ImageView>
+      <Button fx:id="btnDodaj" layoutX="45.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleDodajAction" text="Dodaj" />
+      <Button fx:id="btnIzmeni" layoutX="121.0" layoutY="549.0" mnemonicParsing="false" text="Izmeni" />
+      <Button fx:id="btnObrisi" layoutX="195.0" layoutY="549.0" mnemonicParsing="false" text="Obrisi" />
+    </children>
+</AnchorPane>

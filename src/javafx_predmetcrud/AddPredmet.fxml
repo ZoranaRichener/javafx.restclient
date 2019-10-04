@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="414.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_predmetcrud.AddPredmetController">
+    
+     <children>
+      <Pane prefHeight="56.0" prefWidth="362.0" style="-fx-background-color: #6D1550;" styleClass="note">
+            <children>
+                <Label layoutX="71.0" layoutY="20.0" text="Unos novog predmeta" textFill="#fcfafa">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            </children>
+      </Pane>
+      <Pane layoutY="56.0" prefHeight="358.0" prefWidth="362.0" styleClass="body">
+         <children>
+            <Label fx:id="lbl_naziv" layoutX="14.0" layoutY="113.0" text="Naziv predmeta" />
+            <TextField fx:id="txtNames" layoutX="115.0" layoutY="109.0" prefHeight="25.0" prefWidth="226.0" />
+            <Label fx:id="lbl_sifra" layoutX="17.0" layoutY="180.0" text="Sifra predmeta" />
+            <TextField fx:id="txtSurnames" layoutX="115.0" layoutY="176.0" prefHeight="25.0" prefWidth="226.0" />
+            <Label fx:id="lbl_id" layoutX="17.0" layoutY="47.0" text="Id predmeta" />
+            <TextField fx:id="txtDni" layoutX="113.0" layoutY="43.0" prefHeight="25.0" prefWidth="81.0" />
+            <Button fx:id="btn_azuriraj" layoutX="278.0" layoutY="309.0" mnemonicParsing="false" text="Dodaj">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btn-search" />
+               </styleClass>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+   
+</AnchorPane>
